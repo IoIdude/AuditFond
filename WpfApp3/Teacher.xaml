@@ -1,0 +1,69 @@
+﻿<Page x:Class="WpfApp3.Teacher"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Teacher" Background="Transparent">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Style="{DynamicResource ButtonStyle1}" FontSize="15" FontWeight="DemiBold" Foreground="MediumPurple" Grid.Column="0" Grid.ColumnSpan="2" Background="LightBlue">Преподаватели</Button>
+        <Button Style="{DynamicResource ButtonStyle6}" FontSize="15" FontWeight="DemiBold" Foreground="YellowGreen" Grid.Column="2" Grid.ColumnSpan="2" Click="Button_Click">Аудитории</Button>
+        <Button Style="{DynamicResource ButtonStyle5}" FontSize="15" FontWeight="DemiBold" Foreground="PaleVioletRed" Grid.Column="4" Grid.ColumnSpan="2" Click="Button_Click_1">Группа</Button>
+        <Button Style="{DynamicResource ButtonStyle4}" FontSize="15" FontWeight="DemiBold" Foreground="Violet" Grid.Column="6" Grid.ColumnSpan="2" Click="Button_Click_2">Подразделение</Button>
+        <Button Style="{DynamicResource ButtonStyle3}" FontSize="15" FontWeight="DemiBold" Foreground="LightSkyBlue" Grid.Column="10" Grid.ColumnSpan="2" Click="Button_Click_5">Дисциплины</Button>
+        <Button Style="{DynamicResource ButtonStyle3}" FontSize="15" FontWeight="DemiBold" Foreground="CadetBlue" Grid.Column="8" Grid.ColumnSpan="2" Click="Button_Click_3">Расписание</Button>
+        <Button Style="{DynamicResource ButtonStyle9}" FontSize="15" FontWeight="DemiBold" Foreground="White" Grid.Column="12" Click="Button_Click_4">X</Button>
+
+        <DataGrid Style="{DynamicResource DataGridStyle1}" SelectedCellsChanged="Grid_SelectedCellsChanged" IsReadOnly="True" SelectionMode="Extended" SelectionUnit="FullRow" ItemsSource="{Binding }" AutoGenerateColumns="False" x:Name="Grid" Grid.Row="1" Grid.RowSpan="10" Grid.ColumnSpan="7">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding Id}" Visibility="Collapsed"></DataGridTextColumn>
+                <DataGridTextColumn Header="login" Binding="{Binding Login}" Visibility="Collapsed"></DataGridTextColumn>
+                <DataGridTextColumn Header="password" Binding="{Binding Password}" Visibility="Collapsed"></DataGridTextColumn>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding LastName}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBox Style="{DynamicResource TextBoxStyle1}" Text="Фамилия" Foreground="DarkGray" Padding="2,2,2,2" FontSize="25" x:Name="surnameTb" Grid.Column="9" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBox Style="{DynamicResource TextBoxStyle3}" Text="Имя" Foreground="White" Padding="2,2,2,2" FontSize="25" x:Name="nameTb" Grid.Column="9" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <TextBox Style="{DynamicResource TextBoxStyle2}" Text="Отчество" Foreground="DarkGray" Padding="2,2,2,2" FontSize="25" x:Name="lastNameTb" Grid.Column="9" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <TextBox Style="{DynamicResource TextBoxStyle3}" Text="Логин" Foreground="White" Padding="2,2,2,2" FontSize="25" x:Name="loginTb" Grid.Column="9" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <TextBox Style="{DynamicResource TextBoxStyle2}" Text="Пароль" Foreground="DarkGray" Padding="2,2,2,2" FontSize="25" x:Name="passwordTb" Grid.Column="9" Grid.Row="6" Grid.ColumnSpan="2"/>
+
+
+        <Button Style="{DynamicResource ButtonStyle2}" x:Name="CreateBtn" Foreground="SeaGreen" FontSize="18" FontWeight="SemiBold" Grid.Column="9" Grid.Row="9" Grid.ColumnSpan="2" Click="CreateBtn_Click">Добавить</Button>
+        <Button Style="{DynamicResource ButtonStyle8}" Foreground="CadetBlue" Background="GhostWhite" FontSize="18" FontWeight="SemiBold" x:Name="UpdateBtn" Grid.Column="9" Grid.Row="8" Grid.ColumnSpan="2" Click="UpdateBtn_Click">Изменить</Button>
+        <Button Style="{DynamicResource ButtonStyle7}" Foreground="PaleVioletRed" FontSize="18" FontWeight="SemiBold" x:Name="DeleteBtn" Grid.Column="9" Grid.Row="7" Grid.ColumnSpan="2" Click="DeleteBtn_Click">Удалить</Button>
+    </Grid>
+</Page>

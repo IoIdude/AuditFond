@@ -1,0 +1,17 @@
+﻿<Page x:Class="WpfApp3.Auth"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Auth" Background="Transparent">
+    <Grid>
+        <Button Style="{DynamicResource ButtonStyle11}" FontSize="15" FontWeight="DemiBold" Foreground="White" Margin="744,-2,-2,406" Click="Button_Click_4">X</Button>
+        <Label Margin="247,67,247,312" FontSize="24" FontWeight="ExtraBlack" Foreground="DarkGray" HorizontalContentAlignment="Center">Авторизация</Label>
+        <TextBox Style="{DynamicResource TextBoxStyle4}" Foreground="DarkGray" Padding="2,2,2,2" FontWeight="SemiBold" TextAlignment="Center" FontSize="24" BorderBrush="LightGray" Name="loginTb" Text="Логин" Margin="293,147,293,258"/>
+        <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" Name="passwordTb" Margin="293,205,293,198" Password="password" Foreground="DarkGray" Padding="2,2,2,2" FontSize="24" BorderBrush="LightGray" RenderTransformOrigin="0.5,0.5"/>
+        <Button Style="{DynamicResource ButtonStyle10}" Content="Войти" Margin="330,276,330,126" Click="Button_Click" Background="LightGray" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold" />
+    </Grid>
+</Page>
